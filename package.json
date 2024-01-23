@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/pwshehan/sl-nic-utils/issues"
   },
-  "homepage": "https://github.com/pwshehan/sl-nic-utils#readme"
+  "homepage": "https://github.com/pwshehan/sl-nic-utils#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
