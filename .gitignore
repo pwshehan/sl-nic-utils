@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Compiled output
+lib/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Compiled TypeScript
+*.js
+*.js.map
+*.d.ts
+
+# Test coverage
+coverage/
+
+# Dependency directories
+/jest-puppeteer
+/jest-screenshot

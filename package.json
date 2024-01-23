@@ -1,0 +1,25 @@
+{
+  "name": "sl-nic-utils",
+  "version": "1.0.0",
+  "description": "Sri Lanka NIC Utilities - A versatile npm package for validating, detecting NIC types, swapping between OLD and NEW formats, and extracting details from Sri Lanka National Identity Card (NIC) numbers.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwshehan/sl-nic-utils.git"
+  },
+  "keywords": [
+    "Sri Lanka",
+    "NIC",
+    "Identity card information",
+    "nic details"
+  ],
+  "author": "Shehan Wijethunga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwshehan/sl-nic-utils/issues"
+  },
+  "homepage": "https://github.com/pwshehan/sl-nic-utils#readme"
+}
