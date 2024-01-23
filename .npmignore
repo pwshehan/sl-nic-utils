@@ -1,0 +1,7 @@
+__tests__
+tests
+src
+.babelrc
+tsconfig.json
+.eslintrc
+.npmignore
