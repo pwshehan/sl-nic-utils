@@ -2,8 +2,11 @@
   "name": "sl-nic-utils",
   "version": "1.0.0",
   "description": "Sri Lanka NIC Utilities - An adaptable npm package designed to validate NIC numbers, determine the NIC format, convert between OLD and NEW formats, and extract detailed information from Sri Lanka National Identity Card (NIC) numbers.",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "build": "npx babel src --out-dir lib --extensions \".ts\" && tsc --emitDeclarationOnly",
     "test": "jest"
   },
   "repository": {
@@ -23,6 +26,10 @@
   },
   "homepage": "https://github.com/pwshehan/sl-nic-utils#readme",
   "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-typescript": "^7.23.3",
     "typescript": "^5.3.3"
   }
 }
