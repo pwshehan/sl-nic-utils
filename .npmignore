@@ -1,7 +1,9 @@
 __tests__
 tests
 src
-.babelrc
+.babel.config.json
 tsconfig.json
 .eslintrc
+.prettierrc
 .npmignore
+jest.config.json
