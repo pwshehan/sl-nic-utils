@@ -1,16 +1,13 @@
-import { daysCount, nicPattern, suffixLetter } from "./constants";
-import { NicDetails, NicGender, NicType } from "./types";
+import { daysCount, nicPattern, suffixLetter } from './constants';
+import { NicDetails, NicGender, NicType } from './types';
 
-const getYear = (nic: string): number =>
-  parseInt(nic.length == 10 ? "19" + nic.slice(0, 2) : nic.slice(0, 4));
+const getYear = (nic: string): number => parseInt(nic.length == 10 ? '19' + nic.slice(0, 2) : nic.slice(0, 4));
 
-const getDays = (nic: string): number =>
-  parseInt(nic.length == 10 ? nic.slice(2, 5) : nic.slice(4, 7));
+const getDays = (nic: string): number => parseInt(nic.length == 10 ? nic.slice(2, 5) : nic.slice(4, 7));
 
-const getGender = (days: number): NicGender => (days > 500 ? "Female" : "Male");
+const getGender = (days: number): NicGender => (days > 500 ? 'Female' : 'Male');
 
-const getModifiedDays = (days: number): number =>
-  days > 500 ? days - 500 : days;
+const getModifiedDays = (days: number): number => (days > 500 ? days - 500 : days);
 
 const getDate = (modifiedDays: number): { month: number; day: number } => {
   for (let i = 12; i > 1; i--) {
@@ -40,35 +37,28 @@ export const validateNic = (nic: string): boolean => {
 };
 
 export const getNicType = (nic: string): NicType => {
-  if (!validateNic(nic)) throw new Error("Invalid NIC number");
+  if (!validateNic(nic)) throw new Error('Invalid NIC number');
 
-  return nic.length == 10 ? "OLD" : "NEW";
+  return nic.length == 10 ? 'OLD' : 'NEW';
 };
 
-export const formatNic = (
-  nic: string,
-  formatNicType: NicType = "NEW"
-): string => {
+export const formatNic = (nic: string, formatNicType: NicType = 'NEW'): string => {
   const nicType = getNicType(nic);
 
   if (nicType == formatNicType) return nic;
 
   const year = getYear(nic);
 
-  if (formatNicType == "OLD" && year >= 2000)
-    throw new Error("Invalid request");
+  if (formatNicType == 'OLD' && year >= 2000) throw new Error('Invalid request');
 
   const days = getDays(nic);
-  const suffix =
-    nicType == "OLD" ? nic.slice(5, 9) : nic.slice(8) + suffixLetter;
+  const suffix = nicType == 'OLD' ? nic.slice(5, 9) : nic.slice(8) + suffixLetter;
 
-  return formatNicType == "OLD"
-    ? `${year.toString().slice(2)}${days}${suffix}`
-    : `${year}${days}0${suffix}`;
+  return formatNicType == 'OLD' ? `${year.toString().slice(2)}${days}${suffix}` : `${year}${days}0${suffix}`;
 };
 
 export const getNicDetails = (nic: string): NicDetails => {
-  if (!validateNic(nic)) throw new Error("Invalid NIC number");
+  if (!validateNic(nic)) throw new Error('Invalid NIC number');
 
   const days = getDays(nic);
 
