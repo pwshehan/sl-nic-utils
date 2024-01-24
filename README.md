@@ -22,7 +22,30 @@ npm install sl-nic-utils
 
 ## Usage
 
-coming soon
+```javascript
+const { validateNic, getNicType, formatNic, getNicDetails } = require('sl-nic-utils');
+
+// or
+
+import { validateNic, getNicType, formatNic, getNicDetails } from 'sl-nic-utils';
+```
+
+```javascript
+// NIC Validation
+console.log(validateNic('200125606787')); // true
+console.log(validateNic('20012560678V')); // false
+
+// NIC Type Detection
+console.log(getNicType('200125606787')); // NEW
+console.log(getNicType('882787095V')); // OLD
+
+// Format NIC
+console.log(formatNic('199425606787', 'OLD')); // 942566787V
+console.log(formatNic('882787095V')); // 198827807095
+
+// Get NIC Details
+console.log(getNicDetails('200125606787')); // { gender: 'Male', year: 2001, month: 9, day: 12 }
+```
 
 ## Contributing
 
