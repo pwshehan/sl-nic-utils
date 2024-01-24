@@ -26,6 +26,12 @@ const getDate = (modifiedDays: number): { month: number; day: number } => {
   };
 };
 
+/**
+ * Validates a Sri Lankan National Identity Card (NIC) number.
+ *
+ * @param nic - The NIC number to validate.
+ * @returns True if the NIC is valid, false otherwise.
+ */
 export const validateNic = (nic: string): boolean => {
   if (!nicPattern.test(nic)) return false;
 
@@ -36,12 +42,25 @@ export const validateNic = (nic: string): boolean => {
   return true;
 };
 
+/**
+ * Determines the type of a NIC (National Identity Card) based on its format.
+ * @param nic The NIC number to be evaluated.
+ * @returns The type of the NIC ('OLD' or 'NEW').
+ * @throws {Error} If the NIC number is invalid.
+ */
 export const getNicType = (nic: string): NicType => {
   if (!validateNic(nic)) throw new Error('Invalid NIC number');
 
   return nic.length == 10 ? 'OLD' : 'NEW';
 };
 
+/**
+ * Formats the given NIC (National Identity Card) number based on the specified format type.
+ * @param nic The NIC number to be formatted.
+ * @param formatNicType The format type to be applied to the NIC number. Defaults to 'NEW'.
+ * @returns The formatted NIC number.
+ * @throws Error if an invalid request is made to convert a 'NEW' format NIC to an 'OLD' format NIC after the year 2000.
+ */
 export const formatNic = (nic: string, formatNicType: NicType = 'NEW'): string => {
   const nicType = getNicType(nic);
 
@@ -57,6 +76,12 @@ export const formatNic = (nic: string, formatNicType: NicType = 'NEW'): string =
   return formatNicType == 'OLD' ? `${year.toString().slice(2)}${days}${suffix}` : `${year}${days}0${suffix}`;
 };
 
+/**
+ * Retrieves the details of a NIC (National Identity Card) number.
+ * @param nic - The NIC number to retrieve details for.
+ * @returns The NIC details including gender, year, month, and day.
+ * @throws {Error} If the NIC number is invalid.
+ */
 export const getNicDetails = (nic: string): NicDetails => {
   if (!validateNic(nic)) throw new Error('Invalid NIC number');
 
