@@ -23,11 +23,21 @@ npm install sl-nic-utils
 ## Usage
 
 ```javascript
-const { validateNic, getNicType, formatNic, getNicDetails } = require('sl-nic-utils');
+const {
+  validateNic,
+  getNicType,
+  formatNic,
+  getNicDetails,
+} = require('sl-nic-utils');
 
 // or
 
-import { validateNic, getNicType, formatNic, getNicDetails } from 'sl-nic-utils';
+import {
+  validateNic,
+  getNicType,
+  formatNic,
+  getNicDetails,
+} from 'sl-nic-utils';
 ```
 
 ```javascript
@@ -44,7 +54,8 @@ console.log(formatNic('199425606787', 'OLD')); // 942566787V
 console.log(formatNic('882787095V')); // 198827807095
 
 // Get NIC Details
-console.log(getNicDetails('200125606787')); // { gender: 'Male', year: 2001, month: 9, day: 12 }
+console.log(getNicDetails('200125606787')); // { type: 'NEW', gender: 'Male', birthday: new Date(2001, 8, 12)}
+// Birthday: 2001-09-12
 ```
 
 ## Contributing
