@@ -1,6 +1,11 @@
-__tests__
+# Tests
 tests
+coverage
+
+# Source
 src
+
+# Config
 babel.config.json
 tsconfig.json
 .eslintrc.js

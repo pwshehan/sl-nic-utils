@@ -8,14 +8,6 @@ lib/
 .DS_Store
 Thumbs.db
 
-# VS Code
-.vscode/
-
-# Compiled TypeScript
-*.js
-*.js.map
-*.d.ts
-
 # Test coverage
 coverage/
 

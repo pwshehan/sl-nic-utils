@@ -3,8 +3,7 @@ export type NicType = 'OLD' | 'NEW';
 export type NicGender = 'Male' | 'Female';
 
 export type NicDetails = {
+  type: NicType;
   gender: NicGender;
-  year: number;
-  month: number;
-  day: number;
+  birthday: Date;
 };
