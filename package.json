@@ -6,7 +6,7 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
-    ".": { 
+    ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     }
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/pwshehan/sl-nic-utils#readme",
   "devDependencies": {
+    "prettier": "^3.2.5",
     "typescript": "^5.3.3"
   }
 }
