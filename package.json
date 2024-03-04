@@ -15,9 +15,11 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "npm run build:cjs && npm run build:esm",
-    "test": "jest --config jest.config.js",
-    "lint": "eslint src --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.js\""
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write src",
+    "test": "echo \"Error: no test specified\"",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,18 @@
   },
   "homepage": "https://github.com/pwshehan/sl-nic-utils#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.0",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint src --fix"
+    }
   }
 }
