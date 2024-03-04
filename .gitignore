@@ -2,7 +2,7 @@
 node_modules/
 
 # Compiled output
-lib/
+dist/
 
 # OS-specific files
 .DS_Store
@@ -11,6 +11,7 @@ Thumbs.db
 # Test coverage
 coverage/
 
-# Dependency directories
-/jest-puppeteer
-/jest-screenshot
+# IDE Config
+.idea/
+.vscode/
+
