@@ -1,17 +1,28 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.test.json'],
+  },
+  env: {
+    es6: true,
+    node: true,
+  },
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
-  env: {
-    node: true,
-    jest: true,
-  },
   rules: {
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
+  overrides: [
+    {
+      files: ['src/**/*.{js,jsx,ts,tsx}', 'tests/**/*.{js,jsx,ts,tsx}'],
+      excludedFiles: '**/node_modules/**',
+    },
+  ],
 };

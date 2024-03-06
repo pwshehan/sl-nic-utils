@@ -5,3 +5,5 @@ export const daysCount = [
 ];
 
 export const suffixLetter = 'V';
+
+export const timezone = '+05:30'; // Asia/Colombo
