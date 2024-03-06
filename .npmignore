@@ -1,14 +1,36 @@
+# Node.js
+/node_modules
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
 # Tests
 tests
-coverage
+
+# Test coverage
+/coverage
+
+# IDE Config
+/.idea
+/.vscode
+
+# Temporary files
+/.husky
+
+# Package Lock File
+package-lock.json
 
 # Source
-src
+/src
 
 # Config
-babel.config.json
-tsconfig.json
 .eslintrc.js
-.prettierrc
+.gitignore
 .npmignore
+.prettierrc
 jest.config.js
+tsconfig.cjs.json
+tsconfig.esm.json
+tsconfig.json
+tsconfig.test.json

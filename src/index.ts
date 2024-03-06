@@ -34,9 +34,9 @@ const getDate = (modifiedDays: number): { month: number; day: number } => {
  * Represents a birthday with year, month, and date.
  */
 export class Birthday {
-  private readonly year: number;
-  private readonly month: number;
-  private readonly date: number;
+  readonly year: number;
+  readonly month: number;
+  readonly date: number;
 
   /**
    * Creates a new instance of the Birthday class.
@@ -97,9 +97,7 @@ export default class NIC {
 
     const modifiedDays = getModifiedDays(getDays(this.nic));
 
-    if (modifiedDays < 1 || modifiedDays > 366) return false;
-
-    return true;
+    return !(modifiedDays < 1 || modifiedDays > 366);
   }
 
   /**

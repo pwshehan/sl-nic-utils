@@ -1,17 +1,23 @@
 # Node.js
-node_modules/
+/node_modules
 
 # Compiled output
-dist/
+/dist
 
 # OS-specific files
 .DS_Store
 Thumbs.db
 
 # Test coverage
-coverage/
+/coverage
 
 # IDE Config
-.idea/
-.vscode/
+/.idea
+/.vscode
+
+# Temporary files
+/.husky
+
+# Package Lock File
+package-lock.json
 
