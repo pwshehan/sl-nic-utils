@@ -33,7 +33,7 @@ const getDate = (modifiedDays: number): { month: number; day: number } => {
 /**
  * Represents a birthday with year, month, and date.
  */
-export class Birthday {
+class Birthday {
   readonly year: number;
   readonly month: number;
   readonly date: number;
