@@ -56,6 +56,14 @@ console.log(nic.format('OLD')); // 942566787V
 
 We welcome contributions and feedback. Feel free to submit issues or pull requests on the [GitHub repository](https://github.com/pwshehan/sl-nic-utils).
 
+## Support My Work ☕  
+
+If you find this package useful, consider supporting me on [Buy Me a Coffee](https://buymeacoffee.com/pwshehan). Your support helps keep this project alive!  
+
+<a href="https://buymeacoffee.com/pwshehan">
+  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20My%20Work-orange?logo=buymeacoffee" alt="Buy Me a Coffee">
+</a>
+
 ## License
 
 This package is licensed under the [MIT License](https://opensource.org/licenses/MIT).
