@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "module": "commonjs",
+    "moduleResolution": "Node",
     "declaration": true,
     "declarationDir": "./dist/types",
     "rootDir": "./src",
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
