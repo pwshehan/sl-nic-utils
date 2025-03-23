@@ -1,6 +1,6 @@
 {
   "name": "sl-nic-utils",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Sri Lanka NIC Utilities - An adaptable npm package designed to validate NIC numbers, determine the NIC format, convert between OLD and NEW formats, and extract detailed information from Sri Lanka National Identity Card (NIC) numbers.",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
